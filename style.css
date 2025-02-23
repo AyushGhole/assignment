@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+  background-color: #111;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 0;
+  overflow: hidden; 
+  border: 2px solid white;
+  margin: 2rem;
+}
+
+/* Hero Text */
+.hero h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-in-out forwards;
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+/* Hover Effect on Text */
+.hero h1:hover {
+  color: #f39c12;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+  display: flex; 
+  justify-content: space-between;
+}
+
+/* Image Boxes */
+.image-box {
+  position: relative;
+  width: 220px;
+  height: 140px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1); 
+  margin-left: 10rem;
+}
+.first{
+  position: relative;
+  width: 220px;
+  height: 140px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1); 
+  margin-left: 10rem;
+  margin-right: 10rem !important;
+
+}
+
+/* Images */
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+/* Initial grayscale effect */
+.image-box img {
+  filter: grayscale(100%) contrast(0.5);
+}
+.first img {
+  filter: grayscale(100%) contrast(0.5);
+}
+
+/* Hovered Image - Fully Visible */
+.image-box:hover img {
+  transform: scale(1.05);
+  filter: none;
+}
+.first:hover img {
+  transform: scale(1.05);
+  filter: none;
+}
+
+/* Other images turn into vector-like effect */
+.image-box:not(:hover) img {
+  filter: grayscale(100%) contrast(0.3);
+}
+
+.first:not(:hover) img {
+  filter: grayscale(100%) contrast(0.3);
+}
+
+
+/* Mouse Movement Effect */
+.image-box:hover {
+  z-index: 10;
+}
+.first:hover {
+  z-index: 10;
+}
+/* Fade In Animation for Text */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
